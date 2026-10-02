@@ -1,0 +1,21 @@
+title: Acme.Client
+description: Replace with your .NET API client description
+theme: jekyll-theme-minimal
+
+url: https://markheydon.me.uk
+baseurl: /your-api-client
+
+markdown: kramdown
+permalink: pretty
+
+plugins:
+  - jekyll-readme-index
+  - jekyll-relative-links
+  - jekyll-optional-front-matter
+  - jekyll-seo-tag
+  - jekyll-github-metadata
+
+repository: markheydon/your-api-client
+
+exclude:
+  - contributing

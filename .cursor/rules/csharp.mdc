@@ -1,0 +1,9 @@
+# C# Conventions
+
+Follow `CONVENTIONS.md` and `AGENTS.md`.
+
+- Use async/await; propagate `CancellationToken`.
+- XML documentation on public API members.
+- `JsonPropertyName` on serialised model properties.
+- Register `AcmeClient` via `AddAcmeClient`; do not `new HttpClient()` inside the library.
+- Do not log secrets or API keys.

@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net8.0;net10.0</TargetFrameworks>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+
+    <PackageId>Acme.Client</PackageId>
+    <Version>0.1.0-alpha.1</Version>
+    <Authors>Mark Heydon</Authors>
+    <Description>Replace with your unofficial .NET API client description.</Description>
+    <PackageReleaseNotes>Template package — not for production use.</PackageReleaseNotes>
+    <PackageProjectUrl>https://markheydon.me.uk/your-api-client/</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/markheydon/dotnet-api-client-template</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageTags>api;client;template</PackageTags>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="README.md" Pack="true" PackagePath="\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <InternalsVisibleTo Include="Acme.Client.Tests" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Http" />
+  </ItemGroup>
+
+</Project>
