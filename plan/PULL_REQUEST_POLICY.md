@@ -17,8 +17,8 @@ Canonical taxonomy: [`solo-dev-board/plan/LABEL_STRATEGY.md`](https://github.com
 Examples:
 
 ```text
-[Chore] Scaffold DnsCheck.Client repository (#1)
-[Story] Implement DNS Check v1 monitoring API (#2)
+[Chore] Rename Acme.Client template placeholders (#1)
+[Story] Add first API resource service (#2)
 ```
 
 Do not use Conventional Commits prefixes (`feat:`, `fix:`) or raw label names in titles.
@@ -41,7 +41,7 @@ Complete [`.github/pull_request_template.md`](../.github/PULL_REQUEST_TEMPLATE.m
 
 `size/*` is optional.
 
-Dependabot PRs: `type/chore`, `priority/medium`, `status/todo` (see [dependabot.yml](../.github/dependabot.yml)).
+Dependabot PRs: `dependencies` label (see [dependabot.yml](../.github/dependabot.yml)).
 
 ---
 
@@ -52,7 +52,7 @@ Dependabot PRs: `type/chore`, `priority/medium`, `status/todo` (see [dependabot.
 | Base branch | `main` |
 | Draft | Ready for review when CI gates pass |
 | Assignee | `markheydon` |
-| Secrets | Never commit DNS Check API keys |
+| Secrets | Never commit API keys or credentials |
 
 ---
 

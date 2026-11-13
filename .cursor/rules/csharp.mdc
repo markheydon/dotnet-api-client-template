@@ -1,9 +1,17 @@
-# C# Conventions
+---
+description: C# code authoring
+globs: "**/*.cs"
+alwaysApply: false
+---
+
+# C# code
 
 Follow `CONVENTIONS.md` and `AGENTS.md`.
 
-- Use async/await; propagate `CancellationToken`.
+- Use async/await for I/O; propagate `CancellationToken`.
+- Do not use `.Result`, `.Wait()`, or sync-over-async.
 - XML documentation on public API members.
 - `JsonPropertyName` on serialised model properties.
 - Register `AcmeClient` via `AddAcmeClient`; do not `new HttpClient()` inside the library.
+- Do not add NuGet packages or change architecture without an ADR and explicit instruction.
 - Do not log secrets or API keys.

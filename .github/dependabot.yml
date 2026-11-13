@@ -12,9 +12,7 @@ updates:
     assignees:
       - markheydon
     labels:
-      - type/chore
-      - status/in-review
-      - priority/medium
+      - dependencies
     groups:
       tests:
         patterns:
@@ -71,9 +69,7 @@ updates:
     assignees:
       - markheydon
     labels:
-      - type/chore
-      - status/in-review
-      - priority/medium
+      - dependencies
     groups:
       github-actions:
         patterns:
@@ -82,3 +78,16 @@ updates:
           - major
           - minor
           - patch
+
+  - package-ecosystem: devcontainers
+    directory: "/"
+    schedule:
+      interval: weekly
+      day: monday
+      time: "04:00"
+      timezone: Europe/London
+    open-pull-requests-limit: 5
+    assignees:
+      - markheydon
+    labels:
+      - dependencies

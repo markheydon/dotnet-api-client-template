@@ -1,6 +1,6 @@
 ---
 name: extend-api-client
-description: Extend an HTTP API client SDK — models, RestClient, services, tests, sample console, and docs. Use when adding new documented API operations to a project generated from dotnet-api-client-template.
+description: Extend an HTTP API client SDK - models, RestClient, services, tests, sample console, and docs. Use when adding new documented API operations to a project generated from dotnet-api-client-template.
 ---
 
 # Extend API client

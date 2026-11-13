@@ -2,7 +2,7 @@
 
 # Conventions
 
-**Project:** Acme.Project
+**Project:** Acme.Client
 **Last updated:** (date)
 
 When in doubt, follow this file. Significant architecture changes need an ADR.
@@ -13,23 +13,39 @@ When in doubt, follow this file. Significant architecture changes need an ADR.
 
 ```
 src/
-└── Acme.Project/
+└── Acme.Client/
 
 tests/
-└── Acme.Project.Tests/
+└── Acme.Client.Tests/
+
+samples/
+└── Acme.Console/
+
+docs/
 ```
 
-Add folders (`samples/`, `docs/`, Blazor projects, etc.) as the product grows. Update this section when layout changes.
+Consumer-facing guides for GitHub Pages live under `docs/`. The packed NuGet readme is `src/Acme.Client/README.md`.
+
+---
+
+## Target framework
+
+- Shipped SDK **`net8.0;net10.0`** on `Acme.Client`; pin the SDK band in `global.json` with `rollForward: latestPatch`.
+- CI installs .NET 8 and 10 SDKs so both targets build.
+- Sample and test projects target `net10.0` unless you need otherwise.
 
 ---
 
 ## C# patterns
 
 - **Async/await** for I/O; propagate `CancellationToken` on public async APIs.
+- Do not use `.Result`, `.Wait()`, or sync-over-async.
 - **Nullable reference types** enabled (`Directory.Build.props`).
 - **Treat warnings as errors** in all projects.
 - **XML documentation** on public API members.
-- **HTTP outbound calls** (if any): use `IHttpClientFactory` and typed clients — see [dotnet-api-client-template](https://github.com/markheydon/dotnet-api-client-template) or ADR-0001 in that template.
+- **`JsonPropertyName`** on serialised model properties.
+- **HTTP:** typed client via `AddAcmeClient` and `IHttpClientFactory` - see [ADR-0001](adr/adr-0001-typed-http-client-and-di.md). Do not `new HttpClient()` inside the library.
+- Do not add NuGet packages or change architecture without an ADR and explicit instruction.
 
 ---
 
@@ -37,7 +53,7 @@ Add folders (`samples/`, `docs/`, Blazor projects, etc.) as the product grows. U
 
 - **xUnit v3** with Microsoft.Testing.Platform.
 - **NSubstitute** when mocks are required.
-- **Built-in `Assert` only** — no FluentAssertions, Shouldly, Moq, NUnit, or MSTest.
+- **Built-in `Assert` only** - no FluentAssertions, Shouldly, Moq, NUnit, or MSTest.
 - Test classes: `[ClassName]Tests`. Test methods: `Method_State_Expected`.
 
 ---
@@ -45,4 +61,9 @@ Add folders (`samples/`, `docs/`, Blazor projects, etc.) as the product grows. U
 ## Documentation
 
 - UK English in docs and comments.
-- User-facing docs in `docs/` when the README is not enough; see `.agents/skills/project-documentation/`.
+- Do not use the em dash (Unicode U+2014) in user-facing text, code comments, or documentation in product scope (`src/`, `tests/`, `samples/`, `docs/`, `adr/`, and related root markdown). Use spaced ASCII hyphen ` - ` for prose breaks; use a single `-` for empty or missing UI values (for example table placeholders).
+- **README.md** (repo root): template and contributors.
+- **`docs/`**: consumer guides (GitHub Pages).
+- **`src/.../README.md`**: NuGet package readme.
+- **`plan/API_HTTP_REFERENCE.md`**: maintainer endpoint map (not published to Pages by default).
+- See `.agents/skills/project-documentation/` for placement detail.
