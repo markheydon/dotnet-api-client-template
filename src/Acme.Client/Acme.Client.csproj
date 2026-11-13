@@ -8,7 +8,7 @@
     <Version>0.1.0-alpha.1</Version>
     <Authors>Mark Heydon</Authors>
     <Description>Replace with your unofficial .NET API client description.</Description>
-    <PackageReleaseNotes>Template package — not for production use.</PackageReleaseNotes>
+    <PackageReleaseNotes>Template package - not for production use.</PackageReleaseNotes>
     <PackageProjectUrl>https://markheydon.me.uk/your-api-client/</PackageProjectUrl>
     <RepositoryUrl>https://github.com/markheydon/dotnet-api-client-template</RepositoryUrl>
     <RepositoryType>git</RepositoryType>

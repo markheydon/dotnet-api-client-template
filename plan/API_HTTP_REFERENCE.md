@@ -20,4 +20,4 @@ Template reference for extending `Acme.Client`. Replace paths, envelopes, and au
 
 ## Sample
 
-- `samples/Acme.Console` — optional live smoke via `ACME_API_KEY`
+- `samples/Acme.Console` - optional live smoke via `ACME_API_KEY`

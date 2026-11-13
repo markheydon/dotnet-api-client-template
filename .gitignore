@@ -430,3 +430,6 @@ FodyWeavers.xsd
 
 # Local sample app credentials
 samples/**/appsettings.local.json
+
+# Dev cert export and other machine-local artefacts
+.local/

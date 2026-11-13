@@ -1,0 +1,28 @@
+{
+  "name": "API client SDK (.NET 10)",
+  "image": "mcr.microsoft.com/devcontainers/dotnet:10.0",
+  "features": {
+    "ghcr.io/devcontainers/features/github-cli:1": {},
+    "ghcr.io/markheydon/devcontainer-features/copilot-likes:1": {},
+    "ghcr.io/stu-bell/devcontainer-features/cursor-cli:0": {}
+  },
+  "hostRequirements": {
+    "cpus": 2,
+    "memory": "8gb",
+    "storage": "16gb"
+  },
+  "onCreateCommand": "sudo apt-get update && sudo apt-get install -y libnss3-tools",
+  "remoteEnv": {
+    "SSL_CERT_DIR": "/usr/lib/ssl/certs:/home/vscode/.aspnet/dev-certs/trust"
+  },
+  "postStartCommand": "dotnet dev-certs https --trust",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-dotnettools.csdevkit",
+        "GitHub.copilot",
+        "GitHub.vscode-github-actions"
+      ]
+    }
+  }
+}

@@ -1,13 +1,14 @@
 # Scope
 
-**Project:** Acme.Project
+**Project:** Acme.Client
 **Last updated:** (date)
 
 ---
 
-## In Scope — v1.0
+## In Scope - v1.0
 
-- …
+- Example `Status` operation demonstrating `RestClient` and service layout.
+- Replace with your real v1 endpoints in the child repository.
 
 ---
 
@@ -15,7 +16,8 @@
 
 Do not implement without an explicit scope change.
 
-- …
+- Server-side API implementation.
+- Features the upstream API does not document.
 
 ---
 
@@ -23,4 +25,4 @@ Do not implement without an explicit scope change.
 
 | Date | Change | Reason |
 |---|---|---|
-| (date) | Initial draft from csharp-oss-template | New repository |
+| (date) | Initial draft from dotnet-api-client-template | New repository |
