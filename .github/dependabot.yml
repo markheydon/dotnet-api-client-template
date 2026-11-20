@@ -13,6 +13,10 @@ updates:
       - markheydon
     labels:
       - dependencies
+    ignore:
+      - dependency-name: "Microsoft.Extensions.*"
+        update-types:
+          - version-update:semver-major
     groups:
       tests:
         patterns:
